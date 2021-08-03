@@ -1,0 +1,53 @@
+$Rubik: "Rubik", sans-serif;
+
+@mixin text_style($font_weight) {
+    font-family: $Rubik;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: $font_weight;
+    color: #2a1575;
+}
+.service {
+    display: flex;
+    align-items: center;
+    width: auto;
+    min-height: auto;
+    padding: 10px 30px;
+    .title {
+        font-family: $Rubik;
+        font-style: medium;
+        font-size: 30px;
+        color: #440e47;
+    }
+}
+.bg-block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 400px;
+    height:auto;
+    text-align: center;
+    margin: auto auto;
+    h2{
+        margin: 15px 0 20px 0;
+    }
+    p{
+        height: 150px;
+    }
+}
+
+.style_text {
+    @include text_style(700);
+    max-width: 80%;
+}
+.text-align {
+    text-align: left;
+    margin-left: 30px;
+}
+app-office{
+    text-align: center;
+}

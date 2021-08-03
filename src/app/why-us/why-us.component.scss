@@ -1,0 +1,62 @@
+$Rubik: "Rubik", sans-serif;
+
+@mixin text_style($font_weight, $size, $height, $color) {
+    font-family: $Rubik;
+    font-size: $size;
+    line-height: $height;
+    font-weight: $font_weight;
+    color: $color;
+}
+
+.bg-why-us {
+    position: relative;
+    top: -250px;
+    left: -10%;
+    width: 120%;
+    height: 800px;
+    text-align: center;
+    padding: 0 10rem;
+    border-top-left-radius: 130rem 13rem;
+    border-top-right-radius: 130rem 13rem;
+    background: #fff;
+}
+.wrap {
+    position: relative;
+    top: 100px;
+}
+.services {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    top: 100px;
+    height: 200px;
+    app-service {
+        width: 320px;
+    }
+}
+.my-card {
+    position: relative;
+    top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    // font-family: $Rubik;
+    // color: #440e47;
+    font-weight: 500;
+    h2{
+        @include text_style(500, '48px', 56px, #440E47);
+    }
+    .card-block {
+        display: grid;
+        grid-template-rows: 50px 50px;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-content: center;
+        width: 943px;
+        height: 305px;
+        margin: 20px auto ;
+        padding: 20px;
+    }
+}

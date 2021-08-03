@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+$Rubik: "Rubik", sans-serif;
+// @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+
+*{
+    box-sizing: border-box;
+}
+.btn-styles {
+    border-radius: 16px;
+    border: none;
+    background-color: #25bba0;
+    filter: drop-shadow(0px 4px 11px rgba(0, 0, 0, 0.25));
+    transition: 0.8s;
+    &:hover {
+        background-color: #05836c;
+    }
+}
+
+
+.my-container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.shadow {
+    border-radius: 10px;
+    // box-shadow: 0 3px 0 #3c93d5;
+}
+
+.style-of-title {
+    font-family: $Rubik;
+    font-weight: 500;
+    font-size: 70px;
+    color:#2A1575;
+}

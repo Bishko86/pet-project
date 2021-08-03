@@ -1,0 +1,114 @@
+{
+    "header": {
+        "menu.one": "Adventages",
+        "menu.2": "Features",
+        "menu.3": "Sing in",
+        "title": "UTM builder of enterprise level",
+        "text": "WooCommerce is a customizable, open-source eCommerce platform built on WordPress.Get started quickly and make your way.",
+        "button": "Get your 1st month FREE access!"
+    },
+    "about": {
+        "title": "About",
+        "text": "UTM parameters help funnel-based analytical systems such as Google Analytics to know where your visitors are coming from.In the following form you can generate UTM links for your campaign.",
+        "button": "Generate UTM",
+        "about-us": {
+            "p1": "For more comprehensive features we offer our services.",
+            "p2": "We help you to build and synchronize UTMs as well as UTM templates (?) in between your departments. This will make tracking and sharing your UTMs across your entire marketing team easy. Also you will track much more accurate campaign data and analyze the performance of content across the web.",
+            "p3": "Instead of using messy spreadsheets and reentering the same details, you will have a tool that will help you get good campaign data in your analytics."
+        }
+    },
+    "promo": {
+        "title": "Features we offer"
+    },
+    "why-us": {
+        "title": "Why us?",
+        "card": {
+            "title": "Plan/Price",
+            "sub-title": "Team",
+            "price": "$29",
+            "text": "For team that need advanced sharing & reporting",
+            "button": "Start Free Trial"
+        }
+    },
+    "service": {
+        "about": [
+            {
+                "link": "./../../assets/images/click.png",
+                "text": "Increase clickability"
+            },
+            {
+                "link": "./../../assets/images/magnifying-glass.png",
+                "text": "Save your time and optimize daily processes"
+            },
+            {
+                "link": "./../../assets/images/share.png",
+                "text": "Syncs you UTMs with your team"
+            }
+        ],
+        "promo": [
+            {
+                "link": "./../../assets/images/domain-registration1.png",
+                "text": "Create UTM links with a custom domain to build trust and inrease clickability"
+            },
+            {
+                "link": "./../../assets/images/magnifying-glass.png",
+                "text": "Simplify your process by saving templates for generating UTM URL links"
+            },
+            {
+                "link": "./../../assets/images/domain-registration2.png",
+                "text": "Add UTM paremeters for HTML emails"
+            },
+            {
+                "link": "./../../assets/images/dashboard.png",
+                "text": "Get your personal dashboard where you can analyse UTM params performance"
+            }
+        ],
+        "why-us": [
+            {
+                "link": "./../../assets/images/chat.png",
+                "text": "If you have any question regarding our service, and we will respond in the next 72 hours ",
+                "title": "Support"
+            },
+            {
+                "link": "./../../assets/images/save-money.png",
+                "text": "We take away manual work and optimise the process so you can focus on more strategy goals",
+                "title": "Affordable price"
+            },
+            {
+                "link": "./../../assets/images/puzzle.png",
+                "text": "We continue growing functionality in order to take away the most boring part of work from you",
+                "title": "New features"
+            }
+        ]
+    },
+    "features": {
+        "header": {
+            "home": "Home",
+            "search": "Search"
+        },
+        "title": {
+            "name": "Name",
+            "city": "City",
+            "company": "Company"
+        }
+    },
+    "card": {
+        "link": {
+            "back": "Back",
+            "home": "Home"
+        },
+        "position": "Full Stack Developer",
+        "button": {
+            "follow": "Follow",
+            "message": "Message"
+        },
+        "table": {
+            "fullname": "Full Name",
+            "status": "Status",
+            "phone": "Phone",
+            "email": "Email",
+            "city": "City",
+            "website": "Web Site"
+        }
+    }
+}

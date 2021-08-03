@@ -1,0 +1,6 @@
+<div class="promo">
+    <h2 class="title" appTitleStyle translate>promo.title</h2>
+    <div class="promo-block container">
+        <app-office appShadowBlock  *ngFor="let i of ('service.promo' | translate)" [data]="i" [block]="false" [textStyle]="true"></app-office>
+    </div>
+</div>
