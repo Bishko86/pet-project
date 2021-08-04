@@ -1,20 +1,22 @@
 <header class="face-page">
     <div class="header">
         <div class="logo">Builder</div>
-        <ul tabindex="0" class="drop-list-lang " [class.box-shadow]="changeLang">
-            <li (click)="toggleListLang()" class="lang" role="button">
-                <span>{{langFirst}}</span>
+        <ul tabindex="0" class="drop-list-lang " [class.box-shadow]="translator.changeLang">
+            <li (click)="translator.toggleListLang()" class="lang" role="button">
+                <span>{{'header.menu.lang.first' | translate}}</span>
                 <span class="arrow rotate">&#709;</span>
             </li>
-            <li *ngIf="changeLang" role="button" tabindex="0" (click)="chooseLang(langSecond)">
-                <span>{{langSecond}}</span>
+            <li *ngIf="translator.changeLang" role="button" tabindex="1"
+                (click)="translator.switchLanguage(translator.langSecond)">
+                <span>{{'header.menu.lang.second' | translate}}</span>
             </li>
-            <!-- {{language==="En"&&'Ua'||language==="Ua"&&'En'}} -->
         </ul>
         <div class="options">
-            <a href="#" translate>header.menu.one</a>
-            <a routerLink="features" translate>header.menu.2</a>
-            <a href="#" translate>header.menu.3</a>
+            <nav>
+                <a href="#" translate>header.menu.adventages</a>
+                <a routerLink="features" translate>header.menu.features</a>
+                <a href="#" translate>header.menu.signup</a>
+            </nav>
         </div>
 
     </div>

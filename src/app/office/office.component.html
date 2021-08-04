@@ -1,10 +1,7 @@
-<div class="service"[class.bg-block] = "block"  >
-    <a href="#"><img [src]="data.link" alt="click"></a>
-    <h2 *ngIf="data.title!==''" class="title">{{data.title}}</h2>
-    <p
-     translator class="style_text"
-     [ngClass]="{
+<div class="service" [class.bg-block]="block">
+   <a href="#"><img [src]="data.link" alt="click"></a>
+   <h2 *ngIf="data.title!==''" class="title">{{data.title}}</h2>
+   <p translator class="style_text" [ngClass]="{
         'text-align': textStyle === true 
-        }"
-     >{{data.text}}</p>
+        }">{{data.text}}</p>
 </div>

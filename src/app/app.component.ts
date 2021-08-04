@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
+import { SetLanguageService } from './service/set-language.service';
 
 
 @Component({
@@ -9,9 +9,9 @@ import { TranslateService } from '@ngx-translate/core';
  
 })
 export class AppComponent implements OnInit{
-  constructor(private translate: TranslateService) {
+  constructor(private translate: SetLanguageService) {
   }
   ngOnInit(): void {
-    this.translate.setDefaultLang('en');
+    this.translate.initialSetup()
   }
 }

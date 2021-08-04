@@ -1,7 +1,7 @@
 <div class="features" infiniteScroll [infiniteScrollDistance]="1" [infiniteScrollThrottle]="100"
    (scrolled)="featuresData.scrollLoadData()">
    <header class="header">
-      <a routerLink="/" >{{'features.header.home'|translate}}</a> <br>
+      <a routerLink="/">{{'features.header.home'|translate}}</a> <br>
       <form [formGroup]="form">
          <div class="row g-3 align-items-center">
             <div class="col-auto">
@@ -20,7 +20,10 @@
       <div class="item">{{'features.title.company'|translate}}</div>
 
    </div>
+  
+   <!-- <ng-template #loggedOut> -->
    <div class="table">
+      <div *ngIf="loader" class="loader"></div>
       <ul class="list-group list-group-horizontal-md users-list"
          *ngFor="let item of featuresData.loadData | filter: form.get('search')?.value">
          <li class="list-group-item">
@@ -35,4 +38,5 @@
          <li class="list-group-item">{{item?.company?.name}}</li>
       </ul>
    </div>
+<!-- </ng-template> -->
 </div>

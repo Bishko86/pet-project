@@ -1,8 +1,11 @@
 {
     "header": {
-        "menu.one": "Adventages",
-        "menu.2": "Features",
-        "menu.3": "Sing in",
+        "menu.lang":"Lang",
+        "menu.lang.first": "En",
+        "menu.lang.second": "Ua",
+        "menu.adventages": "Adventages",
+        "menu.features": "Features",
+        "menu.signup": "Sing in",
         "title": "UTM builder of enterprise level",
         "text": "WooCommerce is a customizable, open-source eCommerce platform built on WordPress.Get started quickly and make your way.",
         "button": "Get your 1st month FREE access!"

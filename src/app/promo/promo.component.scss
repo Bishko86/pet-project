@@ -5,24 +5,17 @@
     padding-top:100px;
     position: relative;
     top:-140px;
-    h2{
-        text-align: center;
-    }
+    text-align: center;
+    margin: auto;
 }
 .promo-block{
     display: grid;
-    grid-template-columns:repeat(2, 1fr);
-    grid-template-rows:repeat(2, 1fr);
+    grid-template-columns:repeat(2, 555px);
+    grid-template-rows:repeat(2, 120px);
     row-gap: 40px;
     column-gap: 40px;
-    justify-items: stretch;
+    justify-content: center;
     position: relative;
     top:100px;
 }
-app-office{
-  div{
-        p{
-            text-align: left;
-        }
-    }
-}
+

@@ -6,10 +6,9 @@ import { Directive, ElementRef, Renderer2 } from '@angular/core';
 export class TitleStyleDirective {
 
   constructor(
-    private elementRef: ElementRef, 
+    private elementRef: ElementRef,
     private renderer: Renderer2) {
-
-      this.renderer.addClass(this.elementRef.nativeElement, 'style-of-title');
-    }
+    this.renderer.addClass(this.elementRef.nativeElement, 'style-of-title');
+  }
 
 }

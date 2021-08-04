@@ -28,8 +28,8 @@ export interface FeaturesDataType {
   providedIn: 'root'
 })
 export class FeaturesDataService {
-  private upLimit = 5
-  private lowLimit = 1
+  private upLimit = 10
+  private lowLimit = 6
 
   private featuresData: FeaturesDataType[] = [
     {
@@ -264,128 +264,14 @@ export class FeaturesDataService {
     }
   ]
   loadData: FeaturesDataType[] = [
-    {
-      "id": 1,
-      "name": "Leanne Graham",
-      "username": "Bret",
-      "email": "Sincere@april.biz",
-      "address": {
-        "street": "Kulas Light",
-        "suite": "Apt. 556",
-        "city": "Gwenborough",
-        "zipcode": "92998-3874",
-        "geo": {
-          "lat": "-37.3159",
-          "lng": "81.1496"
-        }
-      },
-      "phone": "1-770-736-8031 x56442",
-      "website": "hildegard.org",
-      "company": {
-        "name": "Romaguera-Crona",
-        "catchPhrase": "Multi-layered client-server neural-net",
-        "bs": "harness real-time e-markets"
-      }
-    },
-    {
-      "id": 2,
-      "name": "Ervin Howell",
-      "username": "Antonette",
-      "email": "Shanna@melissa.tv",
-      "address": {
-        "street": "Victor Plains",
-        "suite": "Suite 879",
-        "city": "Wisokyburgh",
-        "zipcode": "90566-7771",
-        "geo": {
-          "lat": "-43.9509",
-          "lng": "-34.4618"
-        }
-      },
-      "phone": "010-692-6593 x09125",
-      "website": "anastasia.net",
-      "company": {
-        "name": "Deckow-Crist",
-        "catchPhrase": "Proactive didactic contingency",
-        "bs": "synergize scalable supply-chains"
-      }
-    },
-    {
-      "id": 3,
-      "name": "Clementine Bauch",
-      "username": "Samantha",
-      "email": "Nathan@yesenia.net",
-      "address": {
-        "street": "Douglas Extension",
-        "suite": "Suite 847",
-        "city": "McKenziehaven",
-        "zipcode": "59590-4157",
-        "geo": {
-          "lat": "-68.6102",
-          "lng": "-47.0653"
-        }
-      },
-      "phone": "1-463-123-4447",
-      "website": "ramiro.info",
-      "company": {
-        "name": "Romaguera-Jacobson",
-        "catchPhrase": "Face to face bifurcated interface",
-        "bs": "e-enable strategic applications"
-      }
-    },
-    {
-      "id": 4,
-      "name": "Patricia Lebsack",
-      "username": "Karianne",
-      "email": "Julianne.OConner@kory.org",
-      "address": {
-        "street": "Hoeger Mall",
-        "suite": "Apt. 692",
-        "city": "South Elvis",
-        "zipcode": "53919-4257",
-        "geo": {
-          "lat": "29.4572",
-          "lng": "-164.2990"
-        }
-      },
-      "phone": "493-170-9623 x156",
-      "website": "kale.biz",
-      "company": {
-        "name": "Robel-Corkery",
-        "catchPhrase": "Multi-tiered zero tolerance productivity",
-        "bs": "transition cutting-edge web services"
-      }
-    },
-    {
-      "id": 5,
-      "name": "Roman Bishko",
-      "username": "Bi$hk0",
-      "email": "polroldon@gmail.com",
-      "address": {
-        "street": "Skiles Walks",
-        "suite": "Suite 351",
-        "city": "Sukhovolya",
-        "zipcode": "33263",
-        "geo": {
-          "lat": "-31.8129",
-          "lng": "62.5342"
-        }
-      },
-      "phone": "38 097 263 39 33",
-      "website": "https://github.com/Bishko86",
-      "company": {
-        "name": "softserve",
-        "catchPhrase": "Hello :)",
-        "bs": "revolutionize end-to-end systems"
-      }
-    }
+    
   ]
   getById(id: number) {
     return this.loadData.find(item => item.id === id)
   }
-
-  scrollLoadData() {
-     
+  initLoadedData(delay:number):Promise<boolean>{
+    return new Promise((resolve)=>{
+      setTimeout(()=>{
     this.upLimit === 5 ? this.upLimit = 10 : this.upLimit = 5
     this.lowLimit === 1 ? this.lowLimit = 6 : this.lowLimit = 1
 
@@ -395,8 +281,15 @@ export class FeaturesDataService {
       .forEach(item => {
         this.loadData.push({
           ...item,
-          id: this.loadData[this.loadData.length - 1].id + 1
+          id: this.loadData.length===0? item.id:this.loadData[this.loadData.length - 1].id + 1
         })
-      })
+        resolve(true);
+      })},delay)
+    
+    })
+  }
+  scrollLoadData() {
+if(this.loadData.length===0) return
+    this.initLoadedData(50);
   }
 }

@@ -6,7 +6,6 @@ $Rubik: "Rubik", sans-serif;
     font-weight: $font_weight;
     color: #2a1575;
 }
-
 .about {
     display: flex;
     justify-content: space-evenly;
@@ -43,7 +42,6 @@ $Rubik: "Rubik", sans-serif;
         }
     }
 }
-
 .text {
     @include text_style(400);
     width: 457px;
