@@ -23,7 +23,7 @@
   
    <!-- <ng-template #loggedOut> -->
    <div class="table">
-      <div *ngIf="loader" class="loader"></div>
+     
       <ul class="list-group list-group-horizontal-md users-list"
          *ngFor="let item of featuresData.loadData | filter: form.get('search')?.value">
          <li class="list-group-item">
@@ -37,6 +37,7 @@
          <li class="list-group-item">{{item?.address?.city}}</li>
          <li class="list-group-item">{{item?.company?.name}}</li>
       </ul>
+      <div *ngIf="loader" class="loader"></div>
    </div>
 <!-- </ng-template> -->
 </div>

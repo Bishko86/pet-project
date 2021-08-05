@@ -9,21 +9,19 @@ import { FeaturesDataService } from '../service/features-data.service';
 })
 
 export class FeaturesComponent implements OnInit {
-  loader: boolean = true;
+  loader: boolean = false;
   constructor(private featuresDataService: FeaturesDataService) { }
   form: FormGroup = new FormGroup({
     search: new FormControl('')
   });
   featuresData = this.featuresDataService;
-
-  ngOnInit() {
+  async ngOnInit() {
     if (this.featuresData.loadData.length === 0) {
-      this.featuresDataService.initLoadedData(2000).then((result) => {
-        if (result) this.loader = false;
-      })
+      this.loader = true
+      let result = await this.featuresDataService.initLoadedData(700)
+      if (result) this.loader = false;
     }
     else {
-      console.log(this.featuresDataService.loadData);
       this.loader = false;
     }
   }
