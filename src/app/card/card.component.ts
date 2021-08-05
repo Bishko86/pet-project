@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FeaturesDataService, FeaturesDataType } from '../service/features-data.service';
+import { HttpDataService, JsonDataType } from '../service/http-data.service';
 
 @Component({
   selector: 'app-card',
@@ -8,13 +8,13 @@ import { FeaturesDataService, FeaturesDataType } from '../service/features-data.
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
-  item: FeaturesDataType | undefined
+  item: JsonDataType | undefined
   constructor(private route: ActivatedRoute,
-    private featureService: FeaturesDataService, private router: Router) { }
+    private httpService: HttpDataService, private router: Router) { }
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
-      this.item = this.featureService.getById(+params.id)
+      this.item = this.httpService.getById(+params.id)
     })
   }
 

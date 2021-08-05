@@ -2,7 +2,7 @@ $Rubik: "Rubik", sans-serif;
 .face-page {
     background-color: #7854f7;
     width: 100%;
-    height: 450px;
+    height: 500px;
     text-align: center;
 }
 .header {
@@ -18,8 +18,8 @@ $Rubik: "Rubik", sans-serif;
         list-style: none;
         color: #fff;
         position: absolute;
-        top: 6px;
-        left: 65%;
+        top: 5px;
+        left: 60%;
         padding: 6px;
         margin: 0;
         transition: 0.2s;
@@ -94,5 +94,5 @@ p {
 }
 .title {
     position: relative;
-    top: 10px;
+    top: 50px;
 }

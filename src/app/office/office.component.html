@@ -2,6 +2,7 @@
    <a href="#"><img [src]="data.link" alt="click"></a>
    <h2 *ngIf="data.title!==''" class="title">{{data.title}}</h2>
    <p translator class="style_text" [ngClass]="{
-        'text-align': textStyle === true 
+        'text-align': textStyle === true ,
+        'text-weight': textWeight === true
         }">{{data.text}}</p>
 </div>

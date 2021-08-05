@@ -13,7 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { PromoComponent } from './promo/promo.component';
 import { CardComponent } from './card/card.component';
 import { DataOfficeService } from './service/data-office.service';
-import { FeaturesDataService } from './service/features-data.service';
+import { HttpDataService } from './service/http-data.service';
 import { ShadowBlockDirective } from './directive/shadow-block.directive';
 
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
@@ -60,7 +60,7 @@ import { SetLanguageService } from './service/set-language.service';
       }
     })
   ],
-  providers: [DataOfficeService, FeaturesDataService, SetLanguageService],
+  providers: [DataOfficeService, HttpDataService, SetLanguageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

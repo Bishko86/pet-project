@@ -44,7 +44,6 @@ $Rubik: "Rubik", sans-serif;
     }
     .card-block {
         display: grid;
-        // grid-template-rows: 80px 80px;
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
         align-content: center;

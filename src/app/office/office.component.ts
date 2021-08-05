@@ -10,4 +10,5 @@ export class OfficeComponent {
   @Input() data: DataService = { link: '', text: '', title: '' }
   @Input() block: boolean | undefined;
   @Input() textStyle: boolean | undefined;
+  @Input() textWeight: boolean | undefined;
 }

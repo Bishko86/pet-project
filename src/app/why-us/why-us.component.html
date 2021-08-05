@@ -2,7 +2,7 @@
     <div class="wrap">
         <h2 appTitleStyle translate>why-us.title</h2>
         <div class="services">
-            <app-office *ngFor="let i of ('service.why-us'|translate)" [data]="i" [block]="true"></app-office>
+            <app-office *ngFor="let i of ('service.why-us'|translate)" [data]="i" [block]="true" [textWeight]="true" [textStyle]="false"></app-office>
         </div>
         <div class="my-card">
             <h2 translate>why-us.card.title</h2>
@@ -14,7 +14,8 @@
                 <div class="second">
                     <div><span class="price" translate>why-us.card.price</span></div>
                     <div>
-                        <button type="button" class="btn btn-success btn-styles" translate>why-us.card.button</button>
+                        <button type="button" class=" custom_style btn btn-success btn-styles"
+                            translate>why-us.card.button</button>
                     </div>
                 </div>
             </div>

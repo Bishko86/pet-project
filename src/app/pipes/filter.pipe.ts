@@ -1,12 +1,12 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { FeaturesDataType } from '../service/features-data.service';
+import { JsonDataType } from '../service/http-data.service';
 
 @Pipe({
   name: 'filter'
 })
 export class FilterPipe implements PipeTransform {
 
-  transform(items: FeaturesDataType[], search: string = ''): FeaturesDataType[] {
+  transform(items: JsonDataType[], search: string = ''): JsonDataType[] {
     if (!search.trim()) {
       return items;
     }
