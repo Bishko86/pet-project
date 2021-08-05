@@ -1,5 +1,5 @@
 <div class="features" infiniteScroll [infiniteScrollDistance]="1" [infiniteScrollThrottle]="100"
-   (scrolled)="featuresData.scrollLoadData()">
+   (scrolled)="loadingData()">
    <header class="header">
       <a routerLink="/">{{'features.header.home'|translate}}</a> <br>
       <form [formGroup]="form">
@@ -13,6 +13,8 @@
          </div>
       </form>
    </header>
+   
+   
    <div class="table-row title  ">
       <div class="item">&#8470;</div>
       <div class="item">{{'features.title.name'|translate}}</div>
@@ -21,11 +23,12 @@
 
    </div>
   
-   <!-- <ng-template #loggedOut> -->
+  
    <div class="table">
-     
+      
+      <!-- <ng-template #table> -->
       <ul class="list-group list-group-horizontal-md users-list"
-         *ngFor="let item of featuresData.loadData | filter: form.get('search')?.value">
+         *ngFor="let item of featuresData.getUsers() | filter: form.get('search')?.value">
          <li class="list-group-item">
             {{item?.id}}
          </li>
@@ -37,7 +40,11 @@
          <li class="list-group-item">{{item?.address?.city}}</li>
          <li class="list-group-item">{{item?.company?.name}}</li>
       </ul>
-      <div *ngIf="loader" class="loader"></div>
+      <div class="error" *ngIf="error"><h2>Error</h2>
+      <p>{{error}}</p>
+      </div>
+   <!-- </ng-template> -->
+   <div *ngIf="loader" class="loader"></div>
    </div>
-<!-- </ng-template> -->
+
 </div>
