@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { FeaturesDataService } from '../service/features-data.service';
+import { HttpDataService } from '../service/http-data.service';
 
 @Component({
   selector: 'app-features',
@@ -10,19 +10,24 @@ import { FeaturesDataService } from '../service/features-data.service';
 
 export class FeaturesComponent implements OnInit {
   loader: boolean = false;
-  constructor(private featuresDataService: FeaturesDataService) { }
+  error: string = ''
+  constructor(private httpDataService: HttpDataService) { }
   form: FormGroup = new FormGroup({
     search: new FormControl('')
   });
-  featuresData = this.featuresDataService;
-  async ngOnInit() {
-    if (this.featuresData.loadData.length === 0) {
-      this.loader = true
-      let result = await this.featuresDataService.initLoadedData(700)
-      if (result) this.loader = false;
-    }
-    else {
+  featuresData = this.httpDataService;
+
+  loadingData() {
+    this.loader = true
+    this.httpDataService.fetchData().subscribe(() => {
+      this.loader = false;
+    }, (error) => {
+      this.error = error.message
       this.loader = false;
     }
+    )
+  }
+  ngOnInit() {
+    this.loadingData();
   }
 }
