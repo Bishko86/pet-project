@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { throwError } from 'rxjs';
 import { catchError, delay, map } from 'rxjs/operators';
@@ -50,7 +50,12 @@ export class HttpDataService {
   }
   fetchData() {
     this.portion = this.portion === 5 ? 0 : 5
-    return this.http.get<JsonDataType[]>(`https://jsonplaceholder.typicode.com/users?_start=${this.portion}&_limit=${this.limit}`)
+
+    let params = new HttpParams()
+    params.append('_start', this.portion)
+    params.append('_limit', this.limit)
+    
+    return this.http.get<JsonDataType[]>(`https://jsonplaceholder.typicode.com/users`, {params})
       .pipe(map(
         (data: JsonDataType[]) => { this.composeData(data) }),
         catchError((error) => throwError(error)
