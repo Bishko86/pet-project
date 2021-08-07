@@ -16,6 +16,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { SetLanguageService } from './service/set-language.service';
+import { SharedModule } from './directive/shared.module';
 
 
 
@@ -35,6 +36,7 @@ import { SetLanguageService } from './service/set-language.service';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    SharedModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

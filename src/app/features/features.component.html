@@ -34,11 +34,11 @@
          </li>
          <li class="list-group-item">
             <a [routerLink]="['/features',item.id, item.username]">
-               {{item?.name}}
+               {{item.name}}
             </a>
          </li>
-         <li class="list-group-item">{{item?.address?.city}}</li>
-         <li class="list-group-item">{{item?.company?.name}}</li>
+         <li class="list-group-item">{{item.address.city}}</li>
+         <li class="list-group-item">{{item.company.name}}</li>
       </ul>
       <div class="error" *ngIf="error"><h2>Error</h2>
       <p>{{error}}</p>

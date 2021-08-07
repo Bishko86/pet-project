@@ -56,7 +56,8 @@ $Rubik: "Rubik", sans-serif;
             @include text_style(500, 48px, 56px, #440e47);
             position: relative;
             top:30px;
-            left:-140px
+            text-align: left;
+            margin-left: 30px;
         }
         div.text  {
             @include text_style(400, 24px, 36px, #440e47);
