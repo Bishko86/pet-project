@@ -51,11 +51,11 @@ export class HttpDataService {
   fetchData() {
     this.portion = this.portion === 5 ? 0 : 5
 
-    let params = new HttpParams()
-    params.append('_start', this.portion)
-    params.append('_limit', this.limit)
+    // let params = new HttpParams()
+    // params.append('_start', this.portion)
+    // params.append('_limit', this.limit)
     
-    return this.http.get<JsonDataType[]>(`https://jsonplaceholder.typicode.com/users`, {params})
+    return this.http.get<JsonDataType[]>(`https://jsonplaceholder.typicode.com/users?_start=${this.portion}&_limit=${this.limit}`)
       .pipe(map(
         (data: JsonDataType[]) => { this.composeData(data) }),
         catchError((error) => throwError(error)

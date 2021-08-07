@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { HttpDataService, JsonDataType } from '../service/http-data.service';
+import { HttpDataService, JsonDataType } from '../../service/http-data.service';
 
 @Component({
   selector: 'app-card',

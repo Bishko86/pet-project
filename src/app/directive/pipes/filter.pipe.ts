@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { JsonDataType } from '../service/http-data.service';
+import { JsonDataType } from '../../service/http-data.service';
 
 @Pipe({
   name: 'filter'
