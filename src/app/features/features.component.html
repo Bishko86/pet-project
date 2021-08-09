@@ -15,7 +15,7 @@
    </header>
    
    
-   <div class="table-row title  ">
+   <div class="table-row title" >
       <div class="item">&#8470;</div>
       <div class="item">{{'features.title.name'|translate}}</div>
       <div class="item">{{'features.title.city'|translate}}</div>
@@ -33,7 +33,7 @@
             {{item?.id}}
          </li>
          <li class="list-group-item">
-            <a [routerLink]="['/features',item.id, item.username]">
+            <a [routerLink]="[item.id, item.username]">
                {{item.name}}
             </a>
          </li>

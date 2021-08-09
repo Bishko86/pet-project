@@ -34,6 +34,7 @@ export class HttpDataService {
   private limit = 5
   private portion = 5
   private localeData: JsonDataType[] = []
+  
   private composeData(data: JsonDataType[]) {
     data.forEach(user => {
       if (this.localeData.length < 10) {

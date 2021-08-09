@@ -21,7 +21,7 @@ import { FeaturesComponent } from "./features.component";
         CommonModule,
         RouterModule.forChild([
             { path: '', component: FeaturesComponent },
-            { path: 'features/:id/:username', component: CardComponent }
+            { path: ':id/:username', component: CardComponent }
         ]),TranslateModule.forChild({
             loader: {
               provide: TranslateLoader,
