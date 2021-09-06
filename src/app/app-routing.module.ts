@@ -4,9 +4,10 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  {path:'features',
-    loadChildren: () => import('./features/features.module').then(m => m.FeaturesModule)
-    }
+  {
+    path: 'features',
+    loadChildren: () => import('./features/features.module').then(m => m.FeaturesModule)// find out about then
+  }
 ];
 
 @NgModule({

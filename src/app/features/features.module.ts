@@ -33,7 +33,10 @@ import { FeaturesComponent } from "./features.component";
           ReactiveFormsModule
     ],
     exports:[RouterModule],
-    providers:[HttpDataService]
+    providers:[
+        HttpDataService,
+        
+    ]
 })
 
 export class FeaturesModule { }

@@ -17,7 +17,10 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { SetLanguageService } from './service/set-language.service';
 import { SharedModule } from './directive/shared.module';
-
+import { TranslateDatePipe } from './directive/pipes/translate-date.pipe';
+import { registerLocaleData } from '@angular/common';
+import localeUa from '@angular/common/locales/uk';
+registerLocaleData(localeUa);
 
 
 
@@ -31,6 +34,7 @@ import { SharedModule } from './directive/shared.module';
     WhyUsComponent,
     FooterComponent,
     HomeComponent,
+    TranslateDatePipe,
   ],
   imports: [
     BrowserModule,

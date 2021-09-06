@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, LOCALE_ID, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { HttpDataService } from '../service/http-data.service';
 
@@ -8,7 +8,8 @@ import { HttpDataService } from '../service/http-data.service';
   styleUrls: ['./features.component.scss']
 })
 
-export class FeaturesComponent implements OnInit {
+export class FeaturesComponent implements OnInit, OnDestroy {
+
   loader: boolean = false;
   error: string = ''
   constructor(private httpDataService: HttpDataService) { }
@@ -28,6 +29,9 @@ export class FeaturesComponent implements OnInit {
     )
   }
   ngOnInit() {
-    this.loadingData();
+    this.loadingData();// implement unsubscribe
+  }
+  ngOnDestroy(){
+    
   }
 }

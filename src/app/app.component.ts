@@ -11,14 +11,9 @@ import { SetLanguageService } from './service/set-language.service';
 export class AppComponent implements OnInit{
   constructor(private translate: SetLanguageService) {
   }
+  title=''
   ngOnInit(): void {
     this.translate.initialSetup();
   }
 
-  // onActivate(event:any) {
-  //   window.scroll(0,0);
-    //or document.body.scrollTop = 0;
-    //or document.querySelector('body').scrollTo(0,0)
-    
-// }
 }
