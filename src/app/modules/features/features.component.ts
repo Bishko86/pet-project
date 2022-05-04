@@ -1,6 +1,6 @@
-import { Component, LOCALE_ID, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { HttpDataService } from '../service/http-data.service';
+import { HttpDataService } from 'src/app/service/http-data.service';
 
 @Component({
   selector: 'app-features',

@@ -1,8 +1,9 @@
 import { NgModule } from "@angular/core";
-import { OfficeStyleDirective } from "./office-style.directive";
-import { FilterPipe } from "./pipes/filter.pipe";
-import { ShadowBlockDirective } from "./shadow-block.directive";
-import { TitleStyleDirective } from "./title-style.directive";
+import { ShadowBlockDirective } from "../directive/shadow-block.directive";
+import { OfficeStyleDirective } from "../directive/office-style.directive";
+import { FilterPipe } from "../pipes/filter.pipe";
+import { TitleStyleDirective } from "../directive/title-style.directive";
+
 
 @NgModule({
     declarations:[

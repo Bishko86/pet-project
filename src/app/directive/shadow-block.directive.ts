@@ -10,7 +10,4 @@ export class ShadowBlockDirective {
     private renderer: Renderer2) {
     this.renderer.addClass(this.elementRef.nativeElement, 'shadow');
   }
-  // addClass(className: string, element: HTMLDivElement) {
-  //   this.renderer.addClass(element, className);
-  // }
 }

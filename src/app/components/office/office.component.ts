@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { DataService } from '../service/data-office.service';
+import { DataService } from 'src/app/service/data-office.service';
+
 
 @Component({
   selector: 'app-office',

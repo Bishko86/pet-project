@@ -5,11 +5,12 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
 import { InfiniteScrollModule } from "ngx-infinite-scroll";
-import { HttpLoaderFactory } from "../app.module";
-import { SharedModule } from "../directive/shared.module";
-import { HttpDataService } from "../service/http-data.service";
+import { HttpLoaderFactory } from "../../app.module";
+import { SharedModule } from "../../shared/shared.module";
+import { HttpDataService } from "../../service/http-data.service";
 import { CardComponent } from "./card/card.component";
 import { FeaturesComponent } from "./features.component";
+
 
 @NgModule({
     declarations: [

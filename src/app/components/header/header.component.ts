@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { SetLanguageService } from '../service/set-language.service';
+import { SetLanguageService } from 'src/app/service/set-language.service';
+
 
 @Component({
   selector: 'app-header',
